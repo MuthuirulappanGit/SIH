@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:4000";
+const BASE_URL = "https://sih-qnu9.onrender.com";
 
 async function testTimerAndRealData() {
   console.log("=== STARTING WATTWISE CONFIGURABLE TIMER & REAL DATA TEST SUITE ===");
