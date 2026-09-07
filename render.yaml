@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: wattwise-mvp
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4000
+      - key: DATABASE_PATH
+        value: /app/data/wattwise.db
+      - key: JWT_SECRET
+        sync: false
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: DEVICE_API_SECRET
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false

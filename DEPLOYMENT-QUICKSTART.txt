@@ -1,0 +1,11 @@
+WattWise MVP Deployment Kit
+
+Start here:
+1. Read DEPLOYMENT.md.
+2. Use Node.js 20.x.
+3. Copy .env.production.example to your hosting provider's environment settings.
+4. Never deploy or commit a real .env file.
+5. Build with: npm run build
+6. Run with: npm start
+
+Recommended: deploy the complete app as a single Docker/Node web service.
