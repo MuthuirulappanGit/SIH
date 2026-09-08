@@ -312,7 +312,7 @@ function Login({ onLogin }: { onLogin: (user: string) => void }) {
           <label>
             <span>Password</span>
             <input
-              type="password"
+              type="text"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
