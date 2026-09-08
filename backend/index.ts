@@ -1,4 +1,4 @@
-import "dotenv/config";
+import { config } from "dotenv";
 import express, {
   type NextFunction,
   type Request,
@@ -11,8 +11,14 @@ import rateLimit from "express-rate-limit";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import crypto from "node:crypto";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { z } from "zod";
 import { db, id, now, seedDefaults } from "./db.js";
+
+const serverDirectory = dirname(fileURLToPath(import.meta.url));
+config({ path: resolve(serverDirectory, ".env") });
+config({ path: resolve(serverDirectory, "../backend/.env") });
 
 seedDefaults();
 
